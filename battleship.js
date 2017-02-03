@@ -181,6 +181,9 @@ var controller = {
             var hit = model.fire(location);
             //if the guess was a hit and all ships are sunk
             //show player a message that they've won in x guesses
+            
+            //***This is a bug as it doesn't show up once all the ships are sunk 
+            //Will update when I figure it out.***
             if (hit && model.shipsSunk === model.numShips) {
                 view.displayMessage("You sank all my battleships, in " + 
                                             this.guesses + " guesses");
